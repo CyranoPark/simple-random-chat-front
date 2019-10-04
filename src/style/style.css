@@ -14,7 +14,6 @@
 }
 .app-body {
   position: relative;
-  width: 375px;
   height: 100vh;
   margin: auto;
   color: #FFFFFF;
@@ -184,7 +183,7 @@
   border-top: 1px solid #ECECEC;
 }
 .message-input-text {
-  width: 285px;
+  width: 80%;
   height: 50px;
   font-size: 20px;
   padding-left: 10px;
@@ -194,9 +193,9 @@
   cursor: not-allowed;
 }
 .message-input-submit {
-  width: 70px;
+  width: 15%;
   height: 50px;
-  font-size: 20px;
+  font-size: 16px;
   background: #4F5BFF;
   color: #FFFFFF;
   border: none;

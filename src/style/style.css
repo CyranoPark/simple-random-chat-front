@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Mansalva';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Mansalva Regular'), local('Mansalva-Regular'), url(https://fonts.gstatic.com/s/mansalva/v1/aWB4m0aacbtDfvq5NKliKYo.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v17/PN_3Rfi-oW3hYwmKDpxS7F_D-djb.ttf) format('truetype');
+}
+
+.app-body {
+  position: relative;
+  width: 375px;
+  height: 100%;
+  margin: auto;
+  color: #FFFFFF;
+  border: 1px solid #ECECEC;
+}
+
+.main {
+  height: 100%;
+  background: #4F5BFF;
+  background: linear-gradient(180deg, #020024 0%, #4f5bff 0%, #00d4ff 100%);
+}
+
+.join {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 300px;
+  width: 100%;
+  margin: -150px 0 0 -50%;
+}
+
+.join header {
+  height: 100px;
+  line-height: 100px;
+  font-family: 'Mansalva', cursive;
+}
+
+.main-name {
+  height: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.main-name .name-caption {
+  font-family: 'Nanum Gothic', sans-serif;
+  height: 40px;
+}
+
+.main-name input[type=text] {
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-start {
+  margin-top: 20px;
+}
+
+.main-start input[type=submit] {
+  width: 150px;
+  height: 40px;
+  background-color: #2D3CFA;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main-start input[type=submit]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disconnect {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637);
+}
+
+.disconnect-message {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 300px;
+  width: 100%;
+  margin: -150px 0 0 -50%;
+}
+
+.disconnect-message-title {
+  height: 100px;
+  line-height: 100px;
+  font-family: 'Mansalva', cursive;
+  font-size: 25px;
+}
+
+.chat-window {
+  position: relative;
+}
+
+.chat-window header {
+  text-align: center;
+  font-family: 'Mansalva', cursive;
+  line-height: 80px;
+  background: #4F5BFF;
+}
+
+.chat-window .leave-button {
+  left: 5px;
+}
+
+.chat-window .next-button {
+  right: 5px;
+}
+
+.chat-window ul {
+  padding: 0;
+  margin: 0;
+}
+
+.leave-button,
+.next-button {
+  position: absolute;
+  top: 25px;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  background: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.leave-button span,
+.next-button span {
+  margin: 5px;
+}
+
+.message-history {
+  position: relative;
+  height: calc(100vh - 145px);
+  overflow: auto;
+  color: #000000;
+}
+
+.message-history li,
+.message-history div {
+  margin-top: 10px;
+}
+
+.waiting-message,
+.start-message,
+.end-message,
+.partner-writing-message {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+.from-me {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.from-me > div {
+  display: inline-block;
+  background-color: #EDF1F4;
+  min-height: 30px;
+  max-width: 250px;
+  padding: 15px;
+  text-align: left;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.from-partner {
+  padding-left: 10px;
+}
+
+.from-partner > div {
+  display: inline-block;
+  justify-content: left;
+  background-color: #EDF1F4;
+  min-height: 30px;
+  max-width: 250px;
+  padding: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.message-input {
+  position: absolute;
+  bottom: -50px;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #ECECEC;
+}
+
+.message-input-text {
+  width: 285px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  border: none;
+}
+
+.message-input-text:disabled {
+  cursor: not-allowed;
+}
+
+.message-input-submit {
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  background: #4F5BFF;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.message-input-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}

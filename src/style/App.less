@@ -1,0 +1,93 @@
+@import './Common.less';
+
+.app-body {
+  position: relative;
+  width: 375px;
+  height: 100%;
+  margin: auto;
+  color: @textColor;
+  border: 1px solid @messageBorderColor;
+}
+
+.main {
+  height: 100%;
+  background: @mainColor;
+  background: @mainGradient;
+}
+
+.join {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 300px;
+  width: 100%;
+  margin: -150px 0 0 -50%;
+
+  header {
+    height: 100px;
+    line-height: 100px;
+    font-family: @headerFont;
+  }
+}
+
+.main-name {
+  height: 100px;
+  margin: auto;
+  text-align: center;
+
+  .name-caption {
+    font-family: @mainFont;
+    height: 40px;
+  }
+
+  input[type=text] {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.main-start {
+  margin-top: 20px;
+
+  input[type=submit] {
+    width: 150px;
+    height: 40px;
+    background-color: @buttonColor;
+    color: @textColor;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.disconnect {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.637);
+
+  &-message {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 300px;
+    width: 100%;
+    margin: -150px 0 0 -50%;
+  }
+
+  &-message-title {
+    height: 100px;
+    line-height: 100px;
+    font-family: @headerFont;
+    font-size: 25px;
+  }
+}

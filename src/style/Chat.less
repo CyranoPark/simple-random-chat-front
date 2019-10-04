@@ -1,0 +1,132 @@
+@import './Common.less';
+
+.chat-window {
+  position: relative;
+
+  header {
+    text-align: center;
+    font-family: @headerFont;
+    line-height: 80px;
+    background: @mainColor;
+  }
+
+  .leave-button {
+    left: 5px;
+  }
+
+  .next-button {
+    right: 5px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.leave-button, .next-button {
+  position: absolute;
+  top: 25px;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  color: @textColor;
+  text-align: center;
+  background: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  span {
+    margin: 5px;
+  }
+}
+
+.message-history {
+  position: relative;
+  height: calc(100vh - 145px);
+  overflow: auto;
+  color: @messageTextColor;
+
+  li, div {
+    margin-top: 10px;
+  }
+}
+
+.waiting-message,
+.start-message,
+.end-message,
+.partner-writing-message {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+.from-me {
+  text-align: right;
+  padding-right: 10px;
+
+  & > div {
+    display: inline-block;
+    background-color: @messageColor;
+    min-height: 30px;
+    max-width: 250px;
+    padding: 15px;
+    text-align: left;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.from-partner {
+  padding-left: 10px;
+
+  & > div {
+    display: inline-block;
+    justify-content: left;
+    background-color: @messageColor;
+    min-height: 30px;
+    max-width: 250px;
+    padding: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.message-input {
+  position: absolute;
+  bottom: -50px;
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid @messageBorderColor;
+}
+
+.message-input-text {
+  width: 285px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  border: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.message-input-submit {
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  background: @mainColor;
+  color: @textColor;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
